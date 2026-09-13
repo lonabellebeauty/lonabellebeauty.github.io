@@ -1,215 +1,813 @@
 <!DOCTYPE html>
+
 <html lang="hu">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Lona Belle Beauty – manikűr, gél lakk, erősített gél lakk és elegáns körömápolás Budapest VI. kerületében, az Oktogon közelében." />
-  <title>Lona Belle Beauty | Budapest VI.</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Lona Belle Beauty | Budapest VI. • Oktogon</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Italiana&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+
+*{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+
+margin:0;
+
+color:#4d3028;
+
+background:#fff8f3;
+
+font-family:Montserrat,sans-serif;
+
+}
+
+img{width:100%;display:block}
+
+a{text-decoration:none;color:inherit}
+
+:root{
+
+--cream:#fff8f3;
+
+--blush:#f7dfd8;
+
+--rose:#c98578;
+
+--rose2:#a95e53;
+
+--gold:#b58a45;
+
+--brown:#4d3028;
+
+}
+
+header{
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+padding:18px 5%;
+
+background:rgba(255,248,243,.96);
+
+position:sticky;
+
+top:0;
+
+z-index:20;
+
+border-bottom:1px solid #eed9cf;
+
+}
+
+.brand{
+
+display:flex;
+
+align-items:center;
+
+gap:12px;
+
+}
+
+.brand img{
+
+width:70px;
+
+height:70px;
+
+object-fit:contain;
+
+}
+
+.brand-text strong{
+
+display:block;
+
+font-family:Italiana,serif;
+
+font-size:26px;
+
+letter-spacing:2px;
+
+}
+
+.brand-text span{
+
+font-size:10px;
+
+letter-spacing:5px;
+
+}
+
+nav{
+
+display:flex;
+
+gap:24px;
+
+align-items:center;
+
+font-family:Cormorant Garamond,serif;
+
+font-size:17px;
+
+}
+
+.book-small{
+
+background:var(--rose2);
+
+color:white;
+
+padding:12px 20px;
+
+border-radius:10px;
+
+}
+
+.hero{
+
+min-height:680px;
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+background:
+
+linear-gradient(90deg,rgba(255,248,243,.98) 0%,rgba(255,248,243,.91) 43%,rgba(255,248,243,.08) 72%),
+
+url("hero.jpg") center/cover no-repeat;
+
+align-items:center;
+
+padding:55px 6%;
+
+}
+
+.hero-content{
+
+max-width:620px;
+
+text-align:center;
+
+}
+
+.location{
+
+letter-spacing:5px;
+
+font-family:Cormorant Garamond,serif;
+
+font-size:18px;
+
+color:#946d4c;
+
+}
+
+.hero h1{
+
+font-family:Italiana,serif;
+
+font-weight:400;
+
+font-size:74px;
+
+line-height:.95;
+
+margin:22px 0 6px;
+
+}
+
+.beauty{
+
+letter-spacing:14px;
+
+font-family:Cormorant Garamond,serif;
+
+font-size:34px;
+
+}
+
+.tagline{
+
+font-family:Cormorant Garamond,serif;
+
+font-style:italic;
+
+font-size:42px;
+
+line-height:1.05;
+
+margin:32px 0 14px;
+
+}
+
+.heart{
+
+color:var(--gold);
+
+font-size:32px;
+
+margin:6px 0 18px;
+
+}
+
+.subtitle{
+
+font-family:Cormorant Garamond,serif;
+
+letter-spacing:3px;
+
+font-size:17px;
+
+}
+
+.buttons{
+
+display:flex;
+
+gap:16px;
+
+justify-content:center;
+
+margin-top:34px;
+
+}
+
+.btn{
+
+padding:17px 35px;
+
+border-radius:35px;
+
+border:1px solid var(--rose2);
+
+font-family:Cormorant Garamond,serif;
+
+font-size:19px;
+
+letter-spacing:1px;
+
+}
+
+.btn.primary{
+
+background:linear-gradient(135deg,#b8685d,#d39b8d);
+
+color:white;
+
+box-shadow:0 12px 28px rgba(134,75,64,.22);
+
+}
+
+.services{
+
+display:grid;
+
+grid-template-columns:repeat(6,1fr);
+
+padding:30px 4%;
+
+background:#fff7f1;
+
+border-top:1px solid #f0ddd4;
+
+border-bottom:1px solid #f0ddd4;
+
+}
+
+.service{
+
+text-align:center;
+
+padding:12px 8px;
+
+font-family:Cormorant Garamond,serif;
+
+letter-spacing:1px;
+
+}
+
+.icon{
+
+width:74px;
+
+height:74px;
+
+border-radius:50%;
+
+background:#f6e2d9;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+margin:0 auto 12px;
+
+font-size:33px;
+
+color:#b27a48;
+
+}
+
+.service div:last-child{
+
+font-size:17px;
+
+}
+
+.welcome{
+
+display:grid;
+
+grid-template-columns:42% 58%;
+
+background:#fff8f3;
+
+}
+
+.fox-photo{
+
+min-height:510px;
+
+background:url("fox.jpg") center/cover no-repeat;
+
+position:relative;
+
+}
+
+.fox-photo::after{
+
+content:"„A valódi szépség\A csendesen ragyog.”";
+
+white-space:pre;
+
+position:absolute;
+
+bottom:45px;
+
+right:25px;
+
+font-family:Cormorant Garamond,serif;
+
+font-style:italic;
+
+font-size:27px;
+
+text-align:center;
+
+color:#55362d;
+
+}
+
+.welcome-text{
+
+padding:65px 7%;
+
+text-align:center;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+}
+
+.welcome-text h2{
+
+font-family:Cormorant Garamond,serif;
+
+font-size:38px;
+
+font-weight:500;
+
+letter-spacing:2px;
+
+color:#a47c50;
+
+margin:0 0 18px;
+
+}
+
+.welcome-text p{
+
+font-family:Cormorant Garamond,serif;
+
+font-size:21px;
+
+line-height:1.5;
+
+max-width:620px;
+
+margin:0 auto;
+
+}
+
+.features{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:15px;
+
+margin-top:40px;
+
+}
+
+.feature{
+
+padding:14px;
+
+font-family:Cormorant Garamond,serif;
+
+font-size:17px;
+
+}
+
+.feature b{
+
+display:block;
+
+font-size:29px;
+
+color:#9a6840;
+
+margin-bottom:8px;
+
+}
+
+.cta{
+
+padding:65px 20px;
+
+text-align:center;
+
+background:
+
+linear-gradient(rgba(189,123,108,.86),rgba(189,123,108,.86)),
+
+url("flowers.jpg") center/cover;
+
+color:white;
+
+}
+
+.cta a{
+
+display:inline-block;
+
+border:1px solid rgba(255,255,255,.8);
+
+border-radius:40px;
+
+padding:17px 60px;
+
+font-family:Cormorant Garamond,serif;
+
+font-size:30px;
+
+letter-spacing:3px;
+
+}
+
+.cta small{
+
+display:block;
+
+font-size:12px;
+
+letter-spacing:5px;
+
+margin-top:6px;
+
+}
+
+footer{
+
+padding:28px 6%;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+background:#fff8f3;
+
+font-family:Cormorant Garamond,serif;
+
+font-size:17px;
+
+}
+
+footer .motto{
+
+font-style:italic;
+
+font-size:26px;
+
+}
+
+@media(max-width:850px){
+
+header{padding:12px 4%}
+
+.brand img{width:53px;height:53px}
+
+.brand-text strong{font-size:19px}
+
+.brand-text span{font-size:8px}
+
+nav a:not(.book-small){display:none}
+
+.book-small{font-size:12px;padding:10px 13px}
+
+.hero{
+
+grid-template-columns:1fr;
+
+min-height:760px;
+
+padding:45px 6%;
+
+background:
+
+linear-gradient(180deg,rgba(255,248,243,.94) 0%,rgba(255,248,243,.7) 52%,rgba(255,248,243,.03) 100%),
+
+url("hero.jpg") 65% center/cover no-repeat;
+
+align-items:start;
+
+}
+
+.hero-content{margin-top:20px}
+
+.location{font-size:14px;letter-spacing:3px}
+
+.hero h1{font-size:52px}
+
+.beauty{font-size:25px;letter-spacing:10px}
+
+.tagline{font-size:34px}
+
+.subtitle{font-size:14px}
+
+.buttons{flex-direction:column;align-items:center}
+
+.btn{width:85%;}
+
+.services{
+
+grid-template-columns:repeat(3,1fr);
+
+padding:22px 2%;
+
+}
+
+.icon{width:62px;height:62px;font-size:26px}
+
+.service div:last-child{font-size:14px}
+
+.welcome{grid-template-columns:1fr}
+
+.fox-photo{min-height:420px}
+
+.welcome-text{padding:45px 6%}
+
+.features{grid-template-columns:1fr}
+
+footer{
+
+flex-direction:column;
+
+gap:12px;
+
+text-align:center;
+
+}
+
+}
+
+</style>
+
 </head>
+
 <body>
-  <header class="site-header">
-    <a class="brand" href="#top" aria-label="Lona Belle Beauty kezdőlap">
-      <span class="brand-mark">🦋</span>
-      <span>
-        <strong>Lona Belle Beauty</strong>
-        <small>Budapest • Oktogon</small>
-      </span>
-    </a>
 
-    <button class="menu-toggle" aria-label="Menü megnyitása" aria-expanded="false">☰</button>
+<header>
 
-    <nav class="nav" aria-label="Fő navigáció">
-      <a href="#rolam">Rólam</a>
-      <a href="#szolgaltatasok">Szolgáltatások</a>
-      <a href="#galeria">Galéria</a>
-      <a href="#kapcsolat">Kapcsolat</a>
-      <a class="nav-cta" href="#foglalas">Időpontfoglalás</a>
-    </nav>
-  </header>
+<a class="brand" href="#top">
 
-  <main id="top">
-    <section class="hero">
-      <div class="hero-copy">
-        <p class="eyebrow">LONA BELLE BEAUTY • BUDAPEST VI.</p>
-        <h1>A valódi szépség<br><em>csendesen ragyog.</em></h1>
-        <p class="lead">
-          Precíz, nőies és elegáns körmök egy nyugodt, intim szalonban,
-          az Oktogon közelében.
-        </p>
-        <div class="hero-actions">
-          <a class="btn primary" href="#foglalas">Időpontot szeretnék</a>
-          <a class="btn secondary" href="#szolgaltatasok">Szolgáltatások</a>
-        </div>
-        <div class="hero-note">
-          <span>✦</span> Gél lakk
-          <span>✦</span> Erősített gél lakk
-          <span>✦</span> Épített köröm
-        </div>
-      </div>
+<img src="logo.png" alt="Lona Belle Beauty róka és pillangó embléma">
 
-      <div class="hero-art" aria-hidden="true">
-        <div class="orb orb-one"></div>
-        <div class="orb orb-two"></div>
-        <div class="hero-card">
-          <div class="mini-logo">L</div>
-          <p class="script">Lona Belle</p>
-          <p class="sub">BEAUTY</p>
-          <div class="gold-line"></div>
-          <p class="tiny">elegancia • precizitás • nyugalom</p>
-          <div class="icons">🦊 𓆩♡𓆪 🦋</div>
-        </div>
-      </div>
-    </section>
+<div class="brand-text">
 
-    <section class="trust-strip">
-      <div><strong>Precíz munka</strong><span>figyelem minden részletre</span></div>
-      <div><strong>Nyugodt környezet</strong><span>személyes, kellemes hangulat</span></div>
-      <div><strong>Nőies stílus</strong><span>természetestől az elegánsig</span></div>
-    </section>
+<strong>LONA BELLE</strong>
 
-    <section class="section about" id="rolam">
-      <div class="section-kicker">RÓLAM</div>
-      <div class="about-grid">
-        <div>
-          <h2>Szépség, ami nem harsány – mégis feltűnik.</h2>
-        </div>
-        <div class="about-text">
-          <p>
-            A Lona Belle Beauty azért született, hogy legyen egy olyan hely,
-            ahol a szépségápolás nem futószalag, hanem egy kis kiszakadás a napból.
-          </p>
-          <p>
-            Szeretem a letisztult, elegáns, nőies körmöket, de ugyanúgy örömmel
-            készítek kreatív, szezonális vagy különleges díszítéseket is.
-          </p>
-          <p class="signature">— Lona</p>
-        </div>
-      </div>
-    </section>
+<span>BEAUTY</span>
 
-    <section class="section services" id="szolgaltatasok">
-      <div class="section-heading">
-        <div class="section-kicker">SZOLGÁLTATÁSOK</div>
-        <h2>Válaszd ki, mire vágysz</h2>
-        <p>Az árlista könnyen cserélhető, ha később szeretnéd frissíteni.</p>
-      </div>
+</div>
 
-      <div class="service-grid">
-        <article class="service-card featured">
-          <span class="service-number">01</span>
-          <h3>Erősített gél lakk</h3>
-          <p>Tartós, elegáns megoldás természetes körömre, finom megerősítéssel.</p>
-          <a href="#foglalas">Időpontot kérek →</a>
-        </article>
+</a>
 
-        <article class="service-card">
-          <span class="service-number">02</span>
-          <h3>Gél lakk</h3>
-          <p>Ápolt, fényes, nőies körmök klasszikus vagy szezonális színekkel.</p>
-          <a href="#foglalas">Időpontot kérek →</a>
-        </article>
+<nav>
 
-        <article class="service-card">
-          <span class="service-number">03</span>
-          <h3>Épített köröm</h3>
-          <p>Formázott, tartós körmök a természetestől az elegánsabb hosszúságig.</p>
-          <a href="#foglalas">Időpontot kérek →</a>
-        </article>
+<a href="#top">FŐOLDAL</a>
 
-        <article class="service-card">
-          <span class="service-number">04</span>
-          <h3>Díszítés</h3>
-          <p>Kövek, csillogás, szezonális minták és finom, nőies részletek.</p>
-          <a href="#foglalas">Időpontot kérek →</a>
-        </article>
-      </div>
-    </section>
+<a href="#szolgaltatasok">SZOLGÁLTATÁSOK</a>
 
-    <section class="section gallery" id="galeria">
-      <div class="section-heading">
-        <div class="section-kicker">GALÉRIA</div>
-        <h2>Inspirációk a következő szettedhez</h2>
-      </div>
+<a href="#arlista">ÁRLISTA</a>
 
-      <div class="gallery-grid">
-        <div class="gallery-card g1">
-          <span>NUDE & GOLD</span>
-        </div>
-        <div class="gallery-card g2">
-          <span>AUTUMN</span>
-        </div>
-        <div class="gallery-card g3">
-          <span>CLASSIC RED</span>
-        </div>
-        <div class="gallery-card g4">
-          <span>SOFT PINK</span>
-        </div>
-        <div class="gallery-card g5">
-          <span>MINIMAL</span>
-        </div>
-        <div class="gallery-card g6">
-          <span>GLAM</span>
-        </div>
-      </div>
-      <p class="gallery-note">Ide később a saját körömfotóid kerülhetnek.</p>
-    </section>
+<a href="#galeria">GALÉRIA</a>
 
-    <section class="booking" id="foglalas">
-      <div class="booking-inner">
-        <div>
-          <div class="section-kicker light">IDŐPONTFOGLALÁS</div>
-          <h2>Készen állsz egy kis énidőre?</h2>
-          <p>
-            Írj üzenetet, vagy foglalj online. Ha bizonytalan vagy, melyik
-            szolgáltatás lenne neked a legjobb, segítek választani.
-          </p>
-        </div>
-        <div class="booking-actions">
-          <a class="btn booking-btn" href="#" onclick="alert('Ide kerül majd a Salonic foglalási linked 😊'); return false;">Foglalás a Salonicban</a>
-          <a class="text-link" href="https://www.instagram.com/" target="_blank" rel="noopener">Írj Instagramon →</a>
-        </div>
-      </div>
-    </section>
+<a href="#rolam">RÓLAM</a>
 
-    <section class="section contact" id="kapcsolat">
-      <div class="section-heading">
-        <div class="section-kicker">KAPCSOLAT</div>
-        <h2>Találkozzunk a szalonban</h2>
-      </div>
+<a href="#kapcsolat">KAPCSOLAT</a>
 
-      <div class="contact-grid">
-        <div class="contact-card">
-          <span class="icon">⌖</span>
-          <h3>Helyszín</h3>
-          <p>Budapest VI. kerület<br>Oktogon közelében</p>
-        </div>
-        <div class="contact-card">
-          <span class="icon">◷</span>
-          <h3>Időpont</h3>
-          <p>Előzetes bejelentkezés alapján</p>
-        </div>
-        <div class="contact-card">
-          <span class="icon">♡</span>
-          <h3>Kövess</h3>
-          <p>LonaBelleBeauty<br>Instagram • Facebook</p>
-        </div>
-      </div>
-    </section>
-  </main>
+<a class="book-small" href="#foglalas">IDŐPONTFOGLALÁS</a>
 
-  <footer>
-    <div>
-      <strong>Lona Belle Beauty</strong>
-      <p>A valódi szépség csendesen ragyog.</p>
-    </div>
-    <div class="footer-icons">🦊 ✦ 🦋</div>
-    <p class="copyright">© <span id="year"></span> Lona Belle Beauty</p>
-  </footer>
+</nav>
 
-  <script src="script.js"></script>
+</header>
+
+<main id="top">
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="location">BUDAPEST VI. • OKTOGON</div>
+
+<h1>LONA BELLE</h1>
+
+<div class="beauty">BEAUTY</div>
+
+<div class="tagline">A valódi szépség<br>csendesen ragyog.</div>
+
+<div class="heart">♡</div>
+
+<div class="subtitle">PRÉMIUM KÖRÖM- ÉS SZÉPSÉGSZALON<br>AZ OKTOGONNÁL</div>
+
+<div class="buttons">
+
+<a class="btn primary" href="#foglalas">IDŐPONTFOGLALÁS ›</a>
+
+<a class="btn" href="#szolgaltatasok">SZOLGÁLTATÁSOK</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="services" id="szolgaltatasok">
+
+<div class="service">
+
+<div class="icon">💅</div>
+
+<div>GÉL LAKK</div>
+
+</div>
+
+<div class="service">
+
+<div class="icon">◇</div>
+
+<div>ERŐSÍTETT<br>GÉL LAKK</div>
+
+</div>
+
+<div class="service">
+
+<div class="icon">✧</div>
+
+<div>ÉPÍTETT<br>KÖRÖM</div>
+
+</div>
+
+<div class="service">
+
+<div class="icon">♡</div>
+
+<div>KÉZÁPOLÁS</div>
+
+</div>
+
+<div class="service">
+
+<div class="icon">↻</div>
+
+<div>TÖLTÉS</div>
+
+</div>
+
+<div class="service">
+
+<div class="icon">◇</div>
+
+<div>DÍSZÍTÉSEK</div>
+
+</div>
+
+</section>
+
+<section class="welcome" id="rolam">
+
+<div class="fox-photo"></div>
+
+<div class="welcome-text">
+
+<h2>ÜDVÖZÖLLEK<br>A LONA BELLE BEAUTY VILÁGÁBAN</h2>
+
+<p>
+
+Hiszem, hogy a szépség több, mint külső megjelenés.
+
+Egy kis odafigyelés, precizitás és szeretet –
+
+és te még inkább önmagad lehetsz.
+
+</p>
+
+<div class="features">
+
+<div class="feature">
+
+<b>⌖</b>
+
+Budapest VI. kerület<br>Oktogon
+
+</div>
+
+<div class="feature" id="foglalas">
+
+<b>▣</b>
+
+Online<br>időpontfoglalás
+
+</div>
+
+<div class="feature">
+
+<b>♡</b>
+
+Minőségi anyagok<br>és precíz munka
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="cta">
+
+<a href="#szolgaltatasok">
+
+SZOLGÁLTATÁSAIM
+
+<small>SZÉPSÉG MINDEN RÉSZLETBEN</small>
+
+</a>
+
+</section>
+
+</main>
+
+<footer id="kapcsolat">
+
+<div>Instagram: <b>@lonabellebeauty</b></div>
+
+<div class="motto">Szépség. Magabiztosság. Nőiesség.</div>
+
+<div>1067 Budapest • Oktogon</div>
+
+</footer>
+
 </body>
+
 </html>
